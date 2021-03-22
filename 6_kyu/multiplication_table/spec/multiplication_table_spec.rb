@@ -1,0 +1,1 @@
+require 'multiplication_table'
