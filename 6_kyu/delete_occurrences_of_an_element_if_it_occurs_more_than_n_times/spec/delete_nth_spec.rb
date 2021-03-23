@@ -19,8 +19,10 @@ describe "delete_nth" do
     it "does not alter if given an array of 1" do
       expect(delete_nth([1], 2)).to eq([1])
     end
-    xit "does not alter if fewer instances than the limit" do
+    it "does not alter given a longer array and if fewer instances than the limit" do
       expect(delete_nth([1, 1], 2)).to eq([1, 1])
+      expect(delete_nth([1, 1, 1, 2, 2, 2], 2)).to eq([1, 1, 2, 2])
+      expect(delete_nth([3, 4, 5, 5, 4, 3, 3, 4, 5], 2)).to eq([3, 4, 5, 5, 4, 3])
     end
   end
 
