@@ -2,6 +2,15 @@ require 'delete_nth'
 
 describe "delete_nth" do
 
+  context "given one non-array argument" do
+    it "returns an error if given anything but an array" do
+      expect{delete_nth("hi")}.to raise_error("input should be an array")
+      expect{delete_nth(4)}.to raise_error("input should be an array")
+      expect{delete_nth(true)}.to raise_error("input should be an array")
+      expect{delete_nth({colour: "red"})}.to raise_error("input should be an array")
+    end
+  end
+
   context "given one argument" do
     it "does not modify an empty array or single instances" do
       expect(delete_nth([])).to eq([])
