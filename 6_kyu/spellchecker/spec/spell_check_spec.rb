@@ -9,6 +9,7 @@ describe "spell_check" do
   end
   it "highlights a single incorrect word" do
     expect(spell_check("hello", dictionary)).to eq("~hello~")
+    expect(spell_check("bye", dictionary)).to eq("~bye~")
   end
   xit "does not highlight multiple correct words" do
     expect(spell_check("the dog", dictionary)).to eq("the dog")
