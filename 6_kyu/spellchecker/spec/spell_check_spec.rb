@@ -15,7 +15,11 @@ describe "spell_check" do
     expect(spell_check("the dog", dictionary)).to eq("the dog")
     expect(spell_check("is big", dictionary)).to eq("is big")
   end
-  xit "highlights multiple incorrect words" do
-    expect(spell_check("hello", dictionary)).to eq("~hello~")
+  it "highlights multiple incorrect words" do
+    expect(spell_check("hello world", dictionary)).to eq("~hello~ ~world~")
+    expect(spell_check("I love ruby", dictionary)).to eq("~I~ ~love~ ~ruby~")
+  end
+  it "correctly highlights a mix of correct and incorrect words" do
+    expect(spell_check("hello big dog", dictionary)).to eq("~hello~ big dog")
   end
 end

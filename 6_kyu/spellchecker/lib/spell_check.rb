@@ -4,7 +4,7 @@ def spell_check(string, dictionary_array)
     if dictionary_array.include?(word)
       word
     else
-      "~#{string}~"
+      "~#{word}~"
     end
   }
   words.join(" ")
