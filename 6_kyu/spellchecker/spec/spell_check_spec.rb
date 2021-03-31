@@ -26,7 +26,17 @@ describe "spell_check" do
     end
   end
 
-  context "edge cases" do
+  context "Given capitalisation" do
+    it "preserves capitalisation" do
+      expect(spell_check("tHe", dictionary)).to eq("tHe")
+      expect(spell_check("DOG", dictionary)).to eq("DOG")
+      expect(spell_check("is big", dictionary)).to eq("is big")
+      expect(spell_check("heLLo bIG dog", dictionary)).to eq("~heLLo~ bIG dog")
+
+    end
+  end
+
+  context "Edge cases" do
     it "does not modify an empty string" do
       expect(spell_check("", dictionary)).to eq("")
     end

@@ -6,7 +6,7 @@ def spell_check(string, dictionary_array)
 
   words = string.split
   words.map!{ |word|
-    if dictionary_array.include?(word)
+    if dictionary_array.include?(word.downcase)
       word
     else
       "~#{word}~"
