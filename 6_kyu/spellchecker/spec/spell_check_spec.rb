@@ -11,8 +11,9 @@ describe "spell_check" do
     expect(spell_check("hello", dictionary)).to eq("~hello~")
     expect(spell_check("bye", dictionary)).to eq("~bye~")
   end
-  xit "does not highlight multiple correct words" do
+  it "does not highlight multiple correct words" do
     expect(spell_check("the dog", dictionary)).to eq("the dog")
+    expect(spell_check("is big", dictionary)).to eq("is big")
   end
   xit "highlights multiple incorrect words" do
     expect(spell_check("hello", dictionary)).to eq("~hello~")

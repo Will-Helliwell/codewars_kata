@@ -1,7 +1,11 @@
 def spell_check(string, dictionary_array)
-  if dictionary_array.include?(string)
-    string
-  else
-    "~#{string}~"
-  end
+  words = string.split
+  words.map!{ |word|
+    if dictionary_array.include?(word)
+      word
+    else
+      "~#{string}~"
+    end
+  }
+  words.join(" ")
 end
