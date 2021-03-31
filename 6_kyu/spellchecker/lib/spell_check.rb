@@ -1,6 +1,6 @@
 def spell_check(string, dictionary_array)
-  if string == "the"
-    "the"
+  if dictionary_array.include?(string)
+    string
   else
     "~hello~"
   end
