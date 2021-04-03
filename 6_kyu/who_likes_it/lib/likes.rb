@@ -1,3 +1,3 @@
 def likes(array)
-  "Peter likes this"
+  "#{array.first} likes this"
 end
