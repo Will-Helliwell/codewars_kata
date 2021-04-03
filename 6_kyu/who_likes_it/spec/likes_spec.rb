@@ -17,4 +17,9 @@ describe "likes" do
     expect(likes(["Bob", "Kevin", "Steve"])).to eq("Bob, Kevin and Steve like this")
   end
 
+  it "Returns correctly given 4 names" do
+    expect(likes(["Alex", "Jacob", "Mark", "Max"])).to eq("Alex, Jacob and 2 others like this")
+    expect(likes(["Bob", "Kevin", "Steve", "Sarah"])).to eq("Bob, Kevin and 2 others like this")
+  end
+
 end
