@@ -8,6 +8,6 @@ def likes(array)
   elsif array.length == 3
     "#{first_person}, #{second_person} and #{array[2]} like this"
   else
-    "#{first_person}, #{second_person} and 2 others like this"
+    "#{first_person}, #{second_person} and #{array.length - 2} others like this"
   end
 end
