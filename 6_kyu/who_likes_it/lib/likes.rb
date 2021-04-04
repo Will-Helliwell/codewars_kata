@@ -1,5 +1,6 @@
 def likes(array)
   raise ArgumentError.new("expect a single array containing strings") if array.class != Array
+  raise ArgumentError.new("expect a single array containing strings") if array.filter{ |name| name.class != String }.length > 0
   first_person = array.first
   second_person = array[1]
   if array.length == 0

@@ -26,7 +26,7 @@ describe "likes" do
     it "Returns correctly given >4 names" do
       array = []
       for i in 1..100 do
-        array << i
+        array << i.to_s
         i += 1
       end
       expect(likes(["Bob", "Kevin", "Steve", "Sarah", "Alice", "Gemma"])).to eq("Bob, Kevin and 4 others like this")
@@ -46,7 +46,11 @@ describe "likes" do
       expect{likes(123)}.to raise_error(ArgumentError, argument_error_message)
       expect{likes({colour: :blue})}.to raise_error(ArgumentError, argument_error_message)
       expect{likes(true)}.to raise_error(ArgumentError, argument_error_message)
-
+    end
+    it "Returns an error given an array containing anything but strings" do
+      expect{likes([123])}.to raise_error(ArgumentError, argument_error_message)
+      expect{likes([{colour: :blue}])}.to raise_error(ArgumentError, argument_error_message)
+      expect{likes([true])}.to raise_error(ArgumentError, argument_error_message)
     end
   end
 end

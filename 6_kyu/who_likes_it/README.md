@@ -25,4 +25,4 @@ Requirements:
 
 |[]|"no one likes this"|
 |non-array|ArgumentError - expect a single array containing strings|
-|non-array containing non-string|ArgumentError - expect a single array containing strings|
+|array containing non-string|ArgumentError - expect a single array containing strings|
