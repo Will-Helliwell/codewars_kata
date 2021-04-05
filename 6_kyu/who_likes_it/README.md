@@ -24,5 +24,5 @@ Requirements:
 |["Bob", "Kevin", "Steve", "Sarah", "Alice", "Gemma"]|"Bob, Kevin and 4 others like this"|
 
 |[]|"no one likes this"|
-|non-array|ArgumentError - expect a single array containing strings|
-|array containing non-string|ArgumentError - expect a single array containing strings|
+|non-names|ArgumentError - expect a single names containing strings|
+|names containing non-string|ArgumentError - expect a single names containing strings|
