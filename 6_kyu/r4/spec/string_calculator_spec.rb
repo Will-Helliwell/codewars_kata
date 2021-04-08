@@ -12,4 +12,8 @@ describe "string_calculator" do
     expect(string_calculator("3 * 2")).to eq(["3 * 2", 6])
   end
 
+  it "evaluates correctly given an addition" do
+    expect(string_calculator("3 + 2")).to eq(["3 + 2", 5])
+  end
+
 end
