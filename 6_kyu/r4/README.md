@@ -18,6 +18,10 @@ Operators:
 
 | Input | Output |
 | --- | --- |
+|"3"|["3", 3]|
+|"5"|["5", 5]|
+|"123"|["123", 123]|
+
 | "3 * 2" | ["3 * 2", 6] |
 | "3 + 2" | ["3 + 2", 5] |
 | "9 / 3" | ["9 / 3", 3] |
@@ -27,6 +31,6 @@ Operators:
 | "500 / 5" | ["500 / 5", 100] |
 
 |if no space| MathError - "Input must be a valid mathematical string separated by spaces"|
-|""|"", 0|
+|""|["", 0]|
 |non-string|ArgumentError - "Input must be a string" |
 |non-sensical string| MathError - "Input must be a valid mathematical string separated by spaces"|
