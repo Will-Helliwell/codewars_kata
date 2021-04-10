@@ -1,4 +1,7 @@
 def string_calculator(sum)
+
+  raise ArgumentError.new("Input must be a string") if sum.class != String
+  
   chars = sum.split
   first_integer = chars[0].to_i
   operator_string = chars[1]

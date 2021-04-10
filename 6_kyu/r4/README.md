@@ -31,7 +31,7 @@ Operators:
 
 | "500 / 5" | ["500 / 5", 100] |
 
+|non-string|ArgumentError - "Input must be a string" |
 |if no space| MathError - "Input must be a valid mathematical string separated by spaces"|
 |""|["", 0]|
-|non-string|ArgumentError - "Input must be a string" |
 |non-sensical string| MathError - "Input must be a valid mathematical string separated by spaces"|
