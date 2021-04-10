@@ -9,12 +9,13 @@ describe "string_calculator" do
   end
 
   it "evaluates correctly given a multiplication sum" do
-
     expect(string_calculator("3 * 2")).to eq(["3 * 2", 6])
+    expect(string_calculator("4 * 12")).to eq(["4 * 12", 48])
   end
 
   it "evaluates correctly given an addition" do
     expect(string_calculator("3 + 2")).to eq(["3 + 2", 5])
+    expect(string_calculator("10 + 50")).to eq(["10 + 50", 60])
   end
 
 end
