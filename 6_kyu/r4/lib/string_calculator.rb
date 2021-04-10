@@ -17,9 +17,9 @@ end
 
 private
 def evaluate_sum(int1, string, int2)
-  if string == "*"
-    int1 * int2
-  else
-    int1 + int2
+  case string
+    when "*" then int1 * int2
+    when "+" then int1 + int2
+    when "-" then int1 - int2
   end
 end

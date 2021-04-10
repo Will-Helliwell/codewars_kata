@@ -18,4 +18,9 @@ describe "string_calculator" do
     expect(string_calculator("10 + 50")).to eq(["10 + 50", 60])
   end
 
+  it "evaluates correctly given an subtraction" do
+    expect(string_calculator("5 - 3")).to eq(["5 - 3", 2])
+    expect(string_calculator("100 - 1")).to eq(["100 - 1", 99])
+  end
+
 end
