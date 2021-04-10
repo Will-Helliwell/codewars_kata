@@ -23,4 +23,8 @@ describe "string_calculator" do
     expect(string_calculator("100 - 1")).to eq(["100 - 1", 99])
   end
 
+  it "evaluates correctly given a division" do
+    expect(string_calculator("8 / 2")).to eq(["8 / 2", 4])
+    expect(string_calculator("66 / 3")).to eq(["66 / 3", 22])
+  end
 end

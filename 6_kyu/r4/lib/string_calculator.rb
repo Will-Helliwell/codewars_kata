@@ -21,5 +21,6 @@ def evaluate_sum(int1, string, int2)
     when "*" then int1 * int2
     when "+" then int1 + int2
     when "-" then int1 - int2
+    when "/" then int1 / int2
   end
 end
