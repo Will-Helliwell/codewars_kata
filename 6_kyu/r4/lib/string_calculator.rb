@@ -1,17 +1,20 @@
 def string_calculator(sum)
   chars = sum.split
+  result = nil
 
   if chars.length == 1
-    [sum, sum.to_i]
+    result = sum.to_i
   else
     if chars[1] == "*"
       result = chars[0].to_i * chars[2].to_i
-      [sum, result]
     else
       result = chars[0].to_i + chars[2].to_i
-      [sum, result]
     end
-
   end
 
+  [sum, result]
+
 end
+
+# private
+# sum(int, string, int)

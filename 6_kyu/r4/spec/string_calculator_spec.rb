@@ -9,6 +9,7 @@ describe "string_calculator" do
   end
 
   it "evaluates correctly given a multiplication sum" do
+
     expect(string_calculator("3 * 2")).to eq(["3 * 2", 6])
   end
 
