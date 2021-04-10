@@ -1,16 +1,16 @@
 def string_calculator(sum)
 
   raise ArgumentError.new("Input must be a string") if sum.class != String
-  
+
   chars = sum.split
   first_integer = chars[0].to_i
   operator_string = chars[1]
   second_integer = chars[2].to_i
-  result = nil
+  result = 0
 
   if chars.length == 1
     result = sum.to_i
-  else
+  elsif chars.length == 3
     result = evaluate_sum(first_integer, operator_string, second_integer)
   end
 

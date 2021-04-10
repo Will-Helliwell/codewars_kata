@@ -31,6 +31,9 @@ describe "string_calculator" do
   end
 
   context "Edge cases" do
+    it "returns an empty string given an empty string" do
+      expect(string_calculator("")).to eq(["", 0])
+    end
     it "returns an argument error when given a non-string" do
       expect{string_calculator(42)}.to raise_error(ArgumentError, "Input must be a string")
     end
