@@ -8,6 +8,9 @@ describe "sortme" do
 
   it "can sort an array of mixed lower and upper case letters" do
     expect(sortme(["a", "B", "c"])).to eq(["a", "B", "c"])
+  end
+
+  it "can sort an array of mixed lower and upper case words" do
     expect(sortme(["Zoo", "Is", "closed"])).to eq(["closed", "Is", "Zoo"])
   end
 end
