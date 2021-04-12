@@ -12,7 +12,7 @@
 | ["z", "y", "x"]| ["x", "y", "z"]|
 | ["zoo", "is", "closed"]| ["closed", "is", "zoo"]|
 
-| ["A", "b", "c"]| ["A", "b", "c"]|
+| ["a", "B", "c"]| ["a", "B", "c"]|
 | ["my", "Name", "will"]| ["my", "Name", "will"]|
 | ["Zoo", "Is", "closed"]| ["closed", "Is", "Zoo"]|
 | ["C", "d", "a", "B"]) | ["a", "B", "C", "d"] |

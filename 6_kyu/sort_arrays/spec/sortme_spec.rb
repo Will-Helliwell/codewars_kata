@@ -6,7 +6,7 @@ describe "sortme" do
     expect(sortme(["Zoo", "Is", "Closed"])).to eq(["Closed", "Is", "Zoo"])
   end
 
-  xit "can sort an array of lower case letters" do
-    expect(sortme(["zoo", "is", "closed"])).to eq(["closed", "is", "zoo"])
+  it "can sort an array of mixed lower and upper case letters" do
+    expect(sortme(["a", "B", "c"])).to eq(["a", "B", "c"])
   end
 end
