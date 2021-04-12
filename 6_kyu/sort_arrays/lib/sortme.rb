@@ -3,9 +3,7 @@ def sortme(string_array)
   record_upper_case_words(string_array, downcased_words)
   downcase_array(string_array)
   string_array.sort!
-  string_array.each.with_index{ |word, index|
-    string_array[index] = word.capitalize if downcased_words.include?(word)
-  }
+  upcase_matching_words(string_array, downcased_words)
 
   # puts "string_array #{string_array}"
   # puts "downcased_words #{downcased_words}"
@@ -32,5 +30,11 @@ def downcase_array(string_array)
     else
       word
     end
+  }
+end
+
+def upcase_matching_words(string_array, matching_words)
+  string_array.each.with_index{ |word, index|
+    string_array[index] = word.capitalize if matching_words.include?(word)
   }
 end
