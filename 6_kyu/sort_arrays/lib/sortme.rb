@@ -1,12 +1,15 @@
 def sortme(string_array)
-  downcased_words = []
-  record_upper_case_words(string_array, downcased_words)
-  downcase_array(string_array)
-  string_array.sort!
-  upcase_matching_words(string_array, downcased_words)
+  downcased_words_record = []
+  record_upper_case_words(string_array, downcased_words_record)
+  puts "downcased_words_record after recording: #{downcased_words_record}"
+  downcased_array = return_downcase_array(string_array)
+  puts "downcased_words_record after downcasing: #{downcased_words_record}"
+  puts "downcased array: #{downcased_array}"
+  downcased_array.sort!
+  upcase_matching_words(downcased_array, downcased_words_record)
 
   # puts "string_array #{string_array}"
-  # puts "downcased_words #{downcased_words}"
+  # puts "downcased_words #{downcased_words_record}"
 end
 
 
@@ -15,26 +18,35 @@ end
 private
 def record_upper_case_words(string_array, record_array)
   string_array.each{ |word|
+    puts "word before: #{word}"
     if word != word.downcase
       record_array << word
+      puts "word within: #{word}"
     else
       word
     end
+    puts "word after: #{word}"
   }
 end
 
-def downcase_array(string_array)
-  string_array.map!{ |word|
-    if word != word.downcase
-      word.downcase!
+def return_downcase_array(string_array)
+  string_array.map{ |string|
+    if string != string.downcase
+      string.downcase
     else
-      word
+      string
     end
   }
 end
 
 def upcase_matching_words(string_array, matching_words)
+  downcased_matching_words = matching_words.map{ |word|
+    word.downcase
+  }
   string_array.each.with_index{ |word, index|
-    string_array[index] = word.capitalize if matching_words.include?(word)
+    if downcased_matching_words.include?(word)
+      matched_word_index = downcased_matching_words.index(word)
+      string_array[index] = matching_words[matched_word_index]
+    end
   }
 end

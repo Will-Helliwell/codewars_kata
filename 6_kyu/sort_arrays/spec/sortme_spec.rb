@@ -13,4 +13,9 @@ describe "sortme" do
   it "can sort an array of mixed lower and upper case words" do
     expect(sortme(["Zoo", "Is", "closed"])).to eq(["closed", "Is", "Zoo"])
   end
+
+  it "can sort an array of words with non-first letters capitalized" do
+    expect(sortme(["ZoO", "IS", "clOsEd"])).to eq(["clOsEd", "IS", "ZoO"])
+  end
+
 end
