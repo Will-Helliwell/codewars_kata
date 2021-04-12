@@ -9,12 +9,8 @@ def sortme(string_array)
     end
   }
   string_array.sort!
-  string_array.map!{ |word|
-    if downcased_words.include?(word)
-      word.capitalize
-    else
-      word
-    end
+  string_array.each.with_index{ |word, index|
+    string_array[index] = word.capitalize if downcased_words.include?(word)
   }
 
   # puts "string_array #{string_array}"
