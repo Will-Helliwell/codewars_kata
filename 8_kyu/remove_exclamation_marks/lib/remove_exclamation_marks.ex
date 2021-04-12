@@ -13,6 +13,10 @@ defmodule RemoveExclamationMarks do
 
   """
   def remove(string) do
-    string
+    if string == "!" do
+      ""
+    else
+      string
+    end
   end
 end
