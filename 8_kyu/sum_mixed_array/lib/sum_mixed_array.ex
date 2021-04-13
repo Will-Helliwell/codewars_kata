@@ -5,7 +5,7 @@ defmodule SumMixedArray do
   # end
 
   def sumMin(list) do
-    0
+    Enum.sum(list)
   end
 
 end

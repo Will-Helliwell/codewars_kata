@@ -9,4 +9,9 @@ defmodule SumMixedArrayTest do
     assert SumMixedArray.sumMin([]) == 0
   end
 
+  test "returns correctly given a single integer" do
+    assert SumMixedArray.sumMin([1]) == 1
+    assert SumMixedArray.sumMin([2]) == 2
+  end
+
 end
