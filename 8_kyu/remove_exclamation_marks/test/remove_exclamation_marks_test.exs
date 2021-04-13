@@ -13,4 +13,8 @@ defmodule RemoveExclamationMarksTest do
   test "returns an empty string given an exclamation mark" do
     assert RemoveExclamationMarks.remove("!") == ""
   end
+
+  test "removes an exclamation from a single word" do
+    assert RemoveExclamationMarks.remove("hello!") == "hello"
+  end
 end
