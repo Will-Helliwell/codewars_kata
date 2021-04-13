@@ -14,4 +14,8 @@ defmodule SumMixedArrayTest do
     assert SumMixedArray.sumMin([2]) == 2
   end
 
+  test "returns correctly given a single integer-string" do
+    assert SumMixedArray.sumMin(["1"]) == 1
+  end
+
 end
