@@ -1,0 +1,3 @@
+def list(names)
+  ""
+end
