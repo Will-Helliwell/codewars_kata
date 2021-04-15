@@ -2,8 +2,13 @@ def list(names)
   if names.empty?
     ""
   elsif names.length == 1
-    names[0][:name]
+    get_name(names, 0)
   else
-    "#{names[0][:name]} & #{names[1][:name]}"
+    "#{get_name(names, 0)} & #{get_name(names, 1)}"
   end
+end
+
+private
+def get_name(names, index)
+  names[index][:name]
 end
