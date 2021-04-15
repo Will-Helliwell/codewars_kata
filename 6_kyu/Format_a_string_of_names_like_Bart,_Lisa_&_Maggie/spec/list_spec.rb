@@ -10,4 +10,9 @@ describe "list" do
     expect(list([{name: "bob"}])).to eq("bob")
     expect(list([{name: "steve"}])).to eq("steve")
   end
+
+  it "returns 2 names separated by ampersand given 2 names" do
+    expect(list([{ name: "bob" }, { name: "lisa" }])).to eq("bob & lisa")
+    expect(list([{ name: "ken" }, { name: "roger" }])).to eq("ken & roger")
+  end
 end
