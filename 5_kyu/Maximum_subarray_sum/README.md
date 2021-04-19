@@ -11,3 +11,8 @@ all negative or empty --> 0
 
 non-array --> ArgumentError
 array containing >0 non-integers --> ArgumentError
+
+
+0 = -1
+1 = -2
+2 = -3

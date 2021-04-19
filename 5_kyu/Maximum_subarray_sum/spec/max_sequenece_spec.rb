@@ -12,4 +12,8 @@ describe "max sequence" do
     expect(max_sequence([1,2,3])).to eq(6)
     expect(max_sequence([0,5,100,1000])).to eq(1105)
   end
+  it "returns the largest sum given a mix of positive and negative integers" do
+    expect(max_sequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])).to eq(6)
+    expect(max_sequence([-2, 1, -7, 4, -10, 2, 1, 5, 4])).to eq(12)
+  end
 end
