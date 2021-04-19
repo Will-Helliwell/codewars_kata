@@ -17,7 +17,7 @@ describe "list" do
   end
 
   it "returns 3+ names separated by ampersand given 2 names" do
-    # expect(list([{ name: "bob" }, { name: "lisa" }, { name: "quentin" }])).to eq("bob, lisa & quentin")
+    expect(list([{ name: "bob" }, { name: "lisa" }, { name: "quentin" }])).to eq("bob, lisa & quentin")
     expect(list([{ name: "ken" }, { name: "roger" }, { name: "bob" }, { name: "lisa" }, { name: "quentin" }])).to eq("ken, roger, bob, lisa & quentin")
   end
 end

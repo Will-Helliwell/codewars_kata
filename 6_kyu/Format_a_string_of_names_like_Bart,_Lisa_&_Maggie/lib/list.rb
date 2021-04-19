@@ -7,11 +7,9 @@ def list(names)
     "#{get_name(names, 0)} & #{get_name(names, 1)}"
   else
     final_names = [] << names[-2] << names[-1]
-    # final_names_string = final_names.map{ |names_hash| names_hash[:name] }.join(" & ")
-    final_names_string = list(final_names)
     2.times{names.pop}
     first_names_string = names.map{ |names_hash| names_hash[:name] }.join(", ")
-    first_names_string + ", " + final_names_string
+    first_names_string + ", " + list(final_names)
   end
 end
 
