@@ -7,7 +7,6 @@ def max_sequence(arr)
     first_positive_index = get_first_positive_index(arr)
     last_positive_index = get_last_positive_index(arr)
     array_of_interest = arr[first_positive_index..last_positive_index]
-    puts "array of interest = #{array_of_interest}"
     largest_sum = 0
     for i in 0..(array_of_interest.length - 1)
       remaining_numbers = array_of_interest.length - i
