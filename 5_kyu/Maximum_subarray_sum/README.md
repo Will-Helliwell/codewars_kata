@@ -1,7 +1,7 @@
 # Spec
 
 all positive --> array sum
-all negative --> 0
+all negative or empty --> 0
 
 [1,2,3,-1] --> 6
 [-2,1,2,3] --> 6
