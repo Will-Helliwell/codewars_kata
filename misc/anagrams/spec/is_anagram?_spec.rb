@@ -22,4 +22,11 @@ describe "is_anagram?" do
     end
   end
 
+  context "edge cases" do
+    it "returns ArgumentError given at least one non-string" do
+      expect{is_anagram?(1, "hi")}.to raise_error(ArgumentError, "Argument format: (string, string)")
+      expect{is_anagram?("hi", true)}.to raise_error(ArgumentError, "Argument format: (string, string)")
+      expect{is_anagram?(1, ["hi"])}.to raise_error(ArgumentError, "Argument format: (string, string)")
+    end
+  end
 end
