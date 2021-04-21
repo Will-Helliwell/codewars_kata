@@ -24,6 +24,10 @@ describe "is_anagram?" do
     it "ignores spaces" do
       expect(is_anagram?("a b c", "cba")).to eq(true)
     end
+
+    it "ignores capitalisation" do
+      expect(is_anagram?("ABC", "cba")).to eq(true)
+    end
   end
 
   context "edge cases" do

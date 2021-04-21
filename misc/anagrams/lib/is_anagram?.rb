@@ -1,6 +1,6 @@
 def is_anagram?(string1, string2)
   error_invalid_arguments(string1, string2)
-  return true if ordered_letters_array(string1) == ordered_letters_array(string2)
+  return true if ordered_letters_array(string1.downcase) == ordered_letters_array(string2.downcase)
   false
 end
 
