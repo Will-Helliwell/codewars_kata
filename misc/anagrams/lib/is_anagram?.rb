@@ -6,7 +6,7 @@ end
 
 private
 def ordered_letters_array(string)
-  string.split("").sort
+  string.split("").sort.reject{ |letter| letter == " " }
 end
 
 def error_invalid_arguments(string1, string2)

@@ -20,6 +20,10 @@ describe "is_anagram?" do
       expect(is_anagram?("abc", "cba")).to eq(true)
       expect(is_anagram?("mrman", "mrnam")).to eq(true)
     end
+
+    it "ignores spaces" do
+      expect(is_anagram?("a b c", "cba")).to eq(true)
+    end
   end
 
   context "edge cases" do
