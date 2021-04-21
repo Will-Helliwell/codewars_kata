@@ -1,3 +1,4 @@
 def is_anagram?(string1, string2)
-  true
+  return true if string1 == string2
+  false
 end
