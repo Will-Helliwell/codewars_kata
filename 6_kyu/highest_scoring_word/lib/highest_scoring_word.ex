@@ -1,4 +1,5 @@
 defmodule HighestScoringWord do
+  import String
   @moduledoc """
   Documentation for `HighestScoringWord`.
   """
@@ -12,7 +13,10 @@ defmodule HighestScoringWord do
       :world
 
   """
+
+
   def high(str) do
+    contains?(str, "hi")
     str
   end
 

@@ -5,7 +5,7 @@
 | "a" | "a" |
 | "hello" | "hello" |
 
-| ""take two bintang and a dance please" | "bintang" |
+| "take two bintang and a dance please" | "bintang" |
 
 
 | "" | "" |
