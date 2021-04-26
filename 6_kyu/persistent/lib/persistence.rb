@@ -5,7 +5,7 @@ def persistence(n)
   integers_array = n.digits.reverse
 
   while true do
-    multiplicative_sum = integers_array.inject(1){ |base, integer| base * integer}
+    multiplicative_sum = multiply_integers(integers_array)
     multiplicative_persistence += 1
 
     if multiplicative_sum < 10
@@ -15,4 +15,10 @@ def persistence(n)
     end
 
   end
+end
+
+
+private
+def multiply_integers(array)
+  array.inject(1){ |base, integer| base * integer}
 end
