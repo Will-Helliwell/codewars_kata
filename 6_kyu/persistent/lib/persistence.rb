@@ -5,15 +5,9 @@ def persistence(n)
 
   while true do
     integers_array = n.digits.reverse
-    multiplicative_sum = multiply_integers(integers_array)
+    n = multiply_integers(integers_array)
     multiplicative_persistence += 1
-
-    if multiplicative_sum < 10
-      return multiplicative_persistence
-    else
-      n = multiplicative_sum
-    end
-
+    return multiplicative_persistence  if n < 10
   end
 end
 
