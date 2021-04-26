@@ -13,7 +13,7 @@ describe "persistence" do
     expect(persistence(91)).to eq(1)
   end
 
-  xit "returns correctly for numbers with a persistence > 1" do
+  it "returns correctly for numbers with a persistence > 1" do
     expect(persistence(25)).to eq(2)
     expect(persistence(35)).to eq(2)
     expect(persistence(444)).to eq(3)
