@@ -5,7 +5,7 @@ def up_array(arr)
   if contains_only_nines?(arr)
     arr.map!{ |integer| 0 }
     arr.unshift(1)
-  elsif arr[-1] == 9
+  elsif ends_in_nine?(arr)
     index = -1
     until arr[index] != 9 do
       arr[index] = 0
@@ -30,6 +30,10 @@ end
 
 def contains_only_nines?(arr)
   return arr[0] == 9 && arr.uniq.length == 1 ? true : false
+end
+
+def ends_in_nine?(arr)
+  return arr[-1] == 9 ? true : false
 end
 
 def increment_last_digit(arr)
