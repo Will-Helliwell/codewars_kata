@@ -1,8 +1,6 @@
 def up_array(arr)
 
-  return nil if arr.class != Array
-  return nil if arr.length == 0
-  return nil if arr.filter{ |element| element.class != Integer }.length > 0
+  return nil if is_invalid_argument?(arr)
 
   if arr[0] == 9 && arr.uniq.length == 1
     arr.map!{ |integer| 0 }
@@ -20,4 +18,12 @@ def up_array(arr)
 
   arr
 
+end
+
+
+private
+def is_invalid_argument?(arr)
+  return true if arr.class != Array
+  return true if arr.length == 0
+  return true if arr.filter{ |element| element.class != Integer }.length > 0
 end
