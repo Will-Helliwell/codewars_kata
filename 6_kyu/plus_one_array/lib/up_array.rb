@@ -13,7 +13,7 @@ def up_array(arr)
     end
     arr[index] += 1
   else
-    arr[-1] += 1
+    increment_last_digit(arr)
   end
 
   arr
@@ -26,4 +26,8 @@ def is_invalid_argument?(arr)
   return true if arr.class != Array
   return true if arr.length == 0
   return true if arr.filter{ |element| element.class != Integer }.length > 0
+end
+
+def increment_last_digit(arr)
+  arr[-1] += 1
 end
