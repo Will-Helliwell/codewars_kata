@@ -7,4 +7,9 @@ describe "up_array" do
     expect(up_array([1,2])).to eq([1,3])
     expect(up_array([4,5,6])).to eq([4,5,7])
   end
+
+  it "returns correctly when only the final integer is 9" do
+    expect(up_array([9])).to eq([1,0])
+    expect(up_array([2,6,9])).to eq([2,7,0])
+  end
 end
