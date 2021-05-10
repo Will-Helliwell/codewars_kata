@@ -23,5 +23,7 @@ describe "fizzbuzz" do
 
   it "changes the significant numbers and their return values given a hash" do
       expect(fizzbuzz(4, { 4 => "boom" })).to eq("boom")
+      expect(fizzbuzz(7, { 4 => "boom", 7 => "shakalaka" })).to eq("shakalaka")
+      expect(fizzbuzz(28, { 4 => "boom", 7 => "shakalaka" })).to eq("boomshakalaka")
   end
 end
