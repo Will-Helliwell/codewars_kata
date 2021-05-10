@@ -1,13 +1,9 @@
-def fizzbuzz(number, hash={})
+def fizzbuzz(number, hash={3 => "fizz", 5 => "buzz"})
 
-  if hash != {}
+    return_string = ""
     hash.each{ |key, value|
-      return value if number % key == 0
+      return_string += value if number % key == 0
     }
-  end
-
-  return "fizzbuzz" if number % 3 == 0 && number % 5 == 0
-  return "fizz" if number % 3 == 0
-  return "buzz" if number % 5 == 0
-  number
+    return return_string if return_string != ""
+    number
 end
