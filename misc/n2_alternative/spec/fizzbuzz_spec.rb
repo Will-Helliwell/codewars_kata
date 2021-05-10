@@ -20,4 +20,8 @@ describe "fizzbuzz" do
     expect(fizzbuzz(15)).to eq("fizzbuzz")
     expect(fizzbuzz(30)).to eq("fizzbuzz")
   end
+
+  it "changes the significant numbers and their return values given a hash" do
+      expect(fizzbuzz(4, { 4 => "boom" })).to eq("boom")
+  end
 end
