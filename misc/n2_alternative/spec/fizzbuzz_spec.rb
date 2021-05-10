@@ -10,4 +10,14 @@ describe "fizzbuzz" do
     expect(fizzbuzz(3)).to eq("fizz")
     expect(fizzbuzz(9)).to eq("fizz")
   end
+
+  it "returns buzz given a multiple of five" do
+    expect(fizzbuzz(5)).to eq("buzz")
+    expect(fizzbuzz(10)).to eq("buzz")
+  end
+
+  it "returns fizzbuzz given a multiple of three and five" do
+    expect(fizzbuzz(15)).to eq("fizzbuzz")
+    expect(fizzbuzz(30)).to eq("fizzbuzz")
+  end
 end
