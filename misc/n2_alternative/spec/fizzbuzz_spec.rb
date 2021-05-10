@@ -6,7 +6,8 @@ describe "fizzbuzz" do
     expect(fizzbuzz(13)).to eq(13)
   end
 
-  xit "returns fizz given a multiple of three" do
+  it "returns fizz given a multiple of three" do
     expect(fizzbuzz(3)).to eq("fizz")
+    expect(fizzbuzz(9)).to eq("fizz")
   end
 end
