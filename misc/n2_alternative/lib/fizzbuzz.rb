@@ -1,4 +1,6 @@
-def fizzbuzz(number, hash={3 => "fizz", 5 => "buzz"})
+DEFAULT_HASH = {3 => "fizz", 5 => "buzz"}
+
+def fizzbuzz(number, hash=DEFAULT_HASH)
 
     return_string = ""
     hash.each{ |key, value|
