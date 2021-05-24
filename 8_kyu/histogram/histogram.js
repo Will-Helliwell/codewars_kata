@@ -1,6 +1,9 @@
 
 function print_word_frequencies(string) {
-   return frequencies = create_frequency_histogram(string)
+    frequencies = create_frequency_histogram(string)
+    for (word in frequencies) {
+        console.log(`${word}: ${frequencies[word]}\n`)
+    }
 }
 
 function create_frequency_histogram(array) {
