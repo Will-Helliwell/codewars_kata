@@ -39,7 +39,6 @@ function solution(roman) {
     numeral_arr.forEach(numeral => {
         // convert to value
         current_value = value_lookup[numeral];
-        console.log('current_value = ' + current_value);
         // if current larger than previous then take previous off total and subtract from current value, adding to total
         if (previous_value != undefined && current_value > previous_value) {
             total_value += (current_value - previous_value);
@@ -51,8 +50,6 @@ function solution(roman) {
         // keep track of previous
         previous_value = current_value;
     });
-
-    // return total
 
     return total_value;
 }
