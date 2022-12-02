@@ -1,1 +1,0 @@
-require 'merge_sort'
